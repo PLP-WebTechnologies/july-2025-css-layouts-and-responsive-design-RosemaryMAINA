@@ -1,0 +1,116 @@
+/* ==============================
+   Base Styles
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+  padding: 1rem;
+}
+
+/* ==============================
+   Header
+   ============================== */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #4caf50;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   Navigation (Flexbox)
+   ============================== */
+.main-nav ul {
+  list-style: none;
+  display: flex; /* Flexbox used here */
+  justify-content: center;
+  gap: 1.5rem;
+  background: #333;
+  padding: 1rem;
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.main-nav a:hover {
+  color: #4caf50;
+}
+
+/* ==============================
+   Main Layout (Grid)
+   ============================== */
+.grid-layout {
+  display: grid; /* Grid used here */
+  grid-template-columns: 2fr 1fr; /* Content + Sidebar */
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.content, .sidebar {
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* ==============================
+   Flexbox Cards
+   ============================== */
+.flex-cards {
+  display: flex; /* Flexbox used here */
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.card {
+  flex: 1;
+  background: #ffe0b2;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ==============================
+   Responsive Media Queries
+   ============================== */
+
+/* Tablet view (≤ 768px) */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Stack content + sidebar */
+  }
+
+  .main-nav ul {
+    flex-direction: column; /* Nav becomes vertical */
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile view (≤ 480px) */
+@media (max-width: 480px) {
+  .flex-cards {
+    flex-direction: column; /* Cards stack vertically */
+  }
+}
